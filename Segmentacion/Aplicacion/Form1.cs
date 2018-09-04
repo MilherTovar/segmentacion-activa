@@ -16,5 +16,15 @@ namespace Aplicacion
         {
             InitializeComponent();
         }
+
+        private void cargar_Click(object sender, EventArgs e)
+        {
+            if(archivo.ShowDialog()==DialogResult.OK)
+            {
+                this.imagen.SizeMode = PictureBoxSizeMode.StretchImage;
+                imagen.Image = Image.FromFile(archivo.FileName);
+                segmentar.Enabled = true;
+            }
+        }
     }
 }

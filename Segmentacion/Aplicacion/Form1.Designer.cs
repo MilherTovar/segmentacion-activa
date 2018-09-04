@@ -32,6 +32,7 @@
             this.segmentar = new System.Windows.Forms.Button();
             this.imagen = new System.Windows.Forms.PictureBox();
             this.listado = new System.Windows.Forms.ListBox();
+            this.archivo = new System.Windows.Forms.OpenFileDialog();
             ((System.ComponentModel.ISupportInitialize)(this.imagen)).BeginInit();
             this.SuspendLayout();
             // 
@@ -43,9 +44,11 @@
             this.cargar.TabIndex = 0;
             this.cargar.Text = "Cargar iamgen";
             this.cargar.UseVisualStyleBackColor = true;
+            this.cargar.Click += new System.EventHandler(this.cargar_Click);
             // 
             // segmentar
             // 
+            this.segmentar.Enabled = false;
             this.segmentar.Location = new System.Drawing.Point(147, 15);
             this.segmentar.Name = "segmentar";
             this.segmentar.Size = new System.Drawing.Size(133, 25);
@@ -91,6 +94,7 @@
         private System.Windows.Forms.Button segmentar;
         private System.Windows.Forms.PictureBox imagen;
         private System.Windows.Forms.ListBox listado;
+        private System.Windows.Forms.OpenFileDialog archivo;
     }
 }
 
